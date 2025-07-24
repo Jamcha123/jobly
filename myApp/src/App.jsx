@@ -13,7 +13,7 @@ export default function App(){
       e.preventDefault()
       $("#postings").empty()
       let ans = job.value + " job in " + place.value
-      const link = "https://www.googleapis.com/customsearch/v1?key=AIzaSyDtvwiNdkBk6bM5bUPr3ABZbPTtmTs8N2E&cx=b6cc731b86e3f442c&q=" + ans
+      const link = "https://www.googleapis.com/customsearch/v1?key=keys&cx=b6cc731b86e3f442c&q=" + ans
       console.log(link)
 
       const webby = (await axios.get(link))["data"]["items"]
